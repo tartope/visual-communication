@@ -1,0 +1,18 @@
+.home-title h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 180px;
+    margin-left: 300px;
+    margin-right: 300px;
+    background-color: #a5a6f6;
+    padding: 100px 200px;
+    font-family: optima, segoe, segoe ui, candara, calibri, arial, sans-serif;
+    font-weight: 100;
+}
+
+/* h1{
+    background-color: #a5a6f6;
+    padding: 100px 200px;
+    font-family: optima, segoe, segoe ui, candara, calibri, arial, sans-serif;
+    font-weight: 100;
+} */

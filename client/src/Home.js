@@ -1,10 +1,11 @@
 import React from "react";
+import './Home.css';
 
 function Home(){
 
     return(
-        <div>
-            <h1>Home screen</h1>
+        <div className="home-title">
+            <h1>Visual Communication</h1>
         </div>
     )
 }

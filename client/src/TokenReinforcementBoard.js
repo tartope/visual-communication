@@ -4,7 +4,7 @@ function TokenReinforcementBoard(){
 
     return(
         <div>
-            <h1>TokenReinforcementBoard screen</h1>
+            <h1>Token Reinforcement Board screen</h1>
         </div>
     )
 }

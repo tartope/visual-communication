@@ -1,0 +1,12 @@
+.contact-info h2 {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin-top: 180px;
+    margin-left: 300px;
+    margin-right: 300px;
+    background-color: #a5a6f6;
+    padding: 50px 100px;
+    font-family: optima, segoe, segoe ui, candara, calibri, arial, sans-serif;
+    font-weight: 100;
+}

@@ -1,0 +1,11 @@
+.nav-bar{
+    background-color: #a5a6f6;
+    padding: 30px;
+}
+
+.nav{
+    font-size: 25px;
+    font-family: optima, segoe, segoe ui, candara, calibri, arial, sans-serif;
+    display: flex;
+    justify-content: space-around;
+}

@@ -6,7 +6,7 @@ import About from "./About";
 import FirstThenBoard from "./FirstThenBoard";
 import TokenReinforcementBoard from "./TokenReinforcementBoard";
 import Contact from "./Contact";
-// import './App.css';
+import './App.css';
 
 function App() {
   return (
