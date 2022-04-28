@@ -3,7 +3,7 @@ import TokenReinforcementCardCollection from "./TokenReinforcementCardCollection
 
 const visualCardsAPI = "/visual_cards"
 
-function TokenReinforcementBoard(){
+function TokenReinforcement(){
 
     const [visualCards, setVisualCards] = useState([])
 
@@ -23,4 +23,4 @@ function TokenReinforcementBoard(){
     )
 }
 
-export default TokenReinforcementBoard;
+export default TokenReinforcement;

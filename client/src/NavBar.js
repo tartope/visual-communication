@@ -9,8 +9,8 @@ function NavBar(){
             <div className="nav">
                 <NavLink exact to="/">Home</NavLink>
                 <NavLink to="/about">About</NavLink>
-                <NavLink to="/firstthenboard"> First/Then Board </NavLink>
-                <NavLink to="/tokenreinforcementboard">Token Reinforcement Board</NavLink>
+                <NavLink to="/firstthenboard"> First/Then </NavLink>
+                <NavLink to="/tokenreinforcementboard">Token Reinforcement </NavLink>
                 <NavLink to="/contact"> Contact </NavLink>
             </div>
         </div>

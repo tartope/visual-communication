@@ -1,10 +1,10 @@
 import React from "react";
 import './FirstThenCard.css';
 
-function FirstThenCard({ visualCard }){
-
+function FirstThenCard({ visualCard, onClickedCard }){
+    // console.log(visualCard);
     return(
-        <div className="visual-card" >
+        <div className="visual-card" onClick={()=>onClickedCard(visualCard)} >
             <img src={visualCard.image} alt={visualCard.name} />
             <h3> {visualCard.name} </h3>
         

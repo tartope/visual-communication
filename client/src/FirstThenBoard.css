@@ -1,0 +1,30 @@
+.first-then-board-container{
+    max-width: 1200px;
+    margin-left: 150px;
+    margin-right: 100px;
+}
+
+.first-then-board{
+    display: flex;
+    justify-content: space-between;
+    font-family: optima, segoe, segoe ui, candara, calibri, arial, sans-serif;
+    font-size: 50px;
+    font-weight: 100;
+}
+
+
+/* table {
+    font-family: optima, segoe, segoe ui, candara, calibri, arial, sans-serif;
+    font-size: 50px;
+    font-weight: 100;
+    border: 2px solid #0D1B2A;
+    border-radius:4px;
+    width: 1180px;
+    height: 500px;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid #0D1B2A;
+    text-align: center;
+} */

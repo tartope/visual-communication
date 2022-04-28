@@ -1,16 +1,17 @@
 import React from "react";
 import FirstThenCard from "./FirstThenCard"
+import './FirstThenCardCollection.css';
 
-function FirstThenCardCollection({ visualCards }){
+function FirstThenCardCollection({ visualCards, handleAddToFirstThenBoard }){
 
     const visCard = visualCards.map(visualCard => {
         // console.log(character)
-        return <FirstThenCard key={visualCard.id} visualCard={visualCard} />
+        return <FirstThenCard key={visualCard.id} visualCard={visualCard} onClickedCard={handleAddToFirstThenBoard} />
 
     })
 
     return(
-        <div>
+        <div className="first-then-card-collection">
             {visCard}
         </div>
     )

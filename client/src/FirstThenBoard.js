@@ -1,43 +1,25 @@
-import React, {useEffect, useState} from "react";
-import FirstThenCardCollection from "./FirstThenCardCollection"
+import React from "react";
+import FirstThenCard from "./FirstThenCard";
+import './FirstThenBoard.css'; 
 
+function FirstThenBoard({ firstVisualCards }){
 
-const visualCardsAPI = "/visual_cards"
+    const visCard = firstVisualCards.map(firstVisualCard => {
+        console.log(firstVisualCard)
+        return <FirstThenCard key={firstVisualCard.id} visualCard={firstVisualCard} />
 
-function FirstThenBoard(){
-
-    const [visualCards, setVisualCards] = useState([])
-
-    useEffect(()=>{
-        fetch(visualCardsAPI)
-        .then(response => response.json())
-        .then(visualCardsData => {
-            // console.log(visualCardsData)
-            setVisualCards(visualCardsData)
-        })
-    }, [])
-
+    })
+    console.log(visCard)
     return(
-        <div>
-            <FirstThenCardCollection visualCards={visualCards} />
+        <div className="first-then-board-container" >
+            <h3 className="first-then-board">
+                <div>First</div>
+                <div>Then</div>
+                <div>Last</div>
+            </h3>
+            { visCard }
         </div>
     )
 }
 
 export default FirstThenBoard;
-
-
-// if CORS error:
-// 1. go to Gemfile and add: "gem 'rack-cors'"
-// 2. got to confie/cors.rb and add:   Rails.application.config.middleware.insert_before 0, Rack::Cors do
-//                                         allow do
-//                                             origins '*'
-
-//                                             resource '*',
-//                                                 headers: :any,
-//                                                 methods: [:get, :post, :put, :patch, :delete, :options, :head]
-//                                         end
-//                                     end
-// 3. double check package.json file for proxy '"proxy": "http://localhost:3000"'
-// 4. bundle install again to install new gem 
-// 5. if not fixed after step four, delete Gemfile.lock, and bundle install again.
