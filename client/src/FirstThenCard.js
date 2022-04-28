@@ -1,7 +1,7 @@
 import React from "react";
-import './VisualCard.css';
+import './FirstThenCard.css';
 
-function VisualCard({ visualCard }){
+function FirstThenCard({ visualCard }){
 
     return(
         <div className="visual-card" >
@@ -16,4 +16,4 @@ function VisualCard({ visualCard }){
     )
 }
 
-export default VisualCard;
+export default FirstThenCard;

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import VisualCardCollection from "./VisualCardCollection"
+import FirstThenCardCollection from "./FirstThenCardCollection"
 
 
 const visualCardsAPI = "/visual_cards"
@@ -19,7 +19,7 @@ function FirstThenBoard(){
 
     return(
         <div>
-            <VisualCardCollection visualCards={visualCards} />
+            <FirstThenCardCollection visualCards={visualCards} />
         </div>
     )
 }
