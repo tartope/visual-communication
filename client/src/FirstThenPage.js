@@ -29,13 +29,18 @@ function FirstThenPage(){
         }
     }
 
+    function handleRemoveFromFirstThenBoard(visualCard){
+        const removeVisualCard = firstVisualCards.filter(item => item.id !== visualCard.id)
+        setFirstVisualCards(removeVisualCard)
+      }
+
     return(
         <div className="first-then-page" >
             <div className="left">
                 <FirstThenCardCollection visualCards={visualCards} handleAddToFirstThenBoard={handleAddToFirstThenBoard} />
             </div>
             <div className="right">
-                <FirstThenBoard firstVisualCards={firstVisualCards} />
+                <FirstThenBoard firstVisualCards={firstVisualCards} handleRemoveFromFirstThenBoard={handleRemoveFromFirstThenBoard} />
             </div>
         </div>
     )

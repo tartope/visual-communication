@@ -2,11 +2,11 @@ import React from "react";
 import FirstThenCard from "./FirstThenCard";
 import './FirstThenBoard.css'; 
 
-function FirstThenBoard({ firstVisualCards }){
+function FirstThenBoard({ firstVisualCards, handleRemoveFromFirstThenBoard }){
 
     const visCard = firstVisualCards.map(firstVisualCard => {
         console.log(firstVisualCard)
-        return <FirstThenCard key={firstVisualCard.id} visualCard={firstVisualCard} />
+        return <FirstThenCard key={firstVisualCard.id} visualCard={firstVisualCard} onClickedCard={handleRemoveFromFirstThenBoard} />
 
     })
     console.log(visCard)
