@@ -1,7 +1,7 @@
 import React from "react";
 import './FirstThenCard.css';
 
-function FirstThenCard({ visualCard, onClickedCard }){
+function FirstThenCard({ visualCard, onClickedCard, onClickDelete }){
     // console.log(visualCard);
     return(
         <div className="visual-card" onClick={()=>onClickedCard(visualCard)} >
@@ -10,7 +10,10 @@ function FirstThenCard({ visualCard, onClickedCard }){
         
             <div className="visual-card-footer"> 
                 <button className='edit'>edit</button>
-                <button className='delete'>delete</button>
+                <button className='delete' onClick={(event) =>{
+                    event.stopPropagation()
+                    onClickDelete(visualCard)
+                }}>delete</button>
             </div>
         </div>
     )

@@ -32,15 +32,26 @@ function FirstThenPage(){
     function handleRemoveFromFirstThenBoard(visualCard){
         const removeVisualCard = firstVisualCards.filter(item => item.id !== visualCard.id)
         setFirstVisualCards(removeVisualCard)
-      }
+    }
+
+    function handleDeleteVisualCard(deletedVisualCard){
+        // console.log(deletedVisualCard)
+        fetch(`${visualCardsAPI}/${deletedVisualCard.id}`, {
+        method: 'DELETE'
+        });
+        const deleteVisualCards = visualCards.filter(item => item.id !== deletedVisualCard.id)
+        setVisualCards(deleteVisualCards);
+        const deleteFirstVisualCards = firstVisualCards.filter(item => item.id !== deletedVisualCard.id)
+        setFirstVisualCards(deleteFirstVisualCards);
+    }
 
     return(
         <div className="first-then-page" >
             <div className="left">
-                <FirstThenCardCollection visualCards={visualCards} handleAddToFirstThenBoard={handleAddToFirstThenBoard} />
+                <FirstThenCardCollection visualCards={visualCards} handleAddToFirstThenBoard={handleAddToFirstThenBoard} handleDeleteVisualCard={handleDeleteVisualCard} />
             </div>
             <div className="right">
-                <FirstThenBoard firstVisualCards={firstVisualCards} handleRemoveFromFirstThenBoard={handleRemoveFromFirstThenBoard} />
+                <FirstThenBoard firstVisualCards={firstVisualCards} handleRemoveFromFirstThenBoard={handleRemoveFromFirstThenBoard} handleDeleteVisualCard={handleDeleteVisualCard} />
             </div>
         </div>
     )
