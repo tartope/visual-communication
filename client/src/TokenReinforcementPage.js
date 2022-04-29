@@ -28,13 +28,18 @@ function TokenReinforcementPage(){
         }
     }
 
+    function handleRemoveFromTokenReinforcementBoard(visualCard){
+        const removeVisualCard = tokenVisualCards.filter(item => item.id !== visualCard.id)
+        setTokenVisualCards(removeVisualCard)
+    }
+
     return(
         <div className="token-reinforcement-page">
             <div className="left">
                 <TokenReinforcementCardCollection visualCards={visualCards} handleAddToTokenReinforcementBoard={handleAddToTokenReinforcementBoard} />
             </div>
             <div className="right">
-                <TokenReinforcementBoard tokenVisualCards={tokenVisualCards} />
+                <TokenReinforcementBoard tokenVisualCards={tokenVisualCards} handleRemoveFromTokenReinforcementBoard={handleRemoveFromTokenReinforcementBoard} />
             </div>
         </div>
     )
