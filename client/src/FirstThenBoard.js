@@ -9,7 +9,16 @@ function FirstThenBoard({ firstVisualCards, handleRemoveFromFirstThenBoard, hand
         return <FirstThenCard key={firstVisualCard.id} visualCard={firstVisualCard} onClickedCard={handleRemoveFromFirstThenBoard} onClickDelete={handleDeleteVisualCard}/>
 
     })
-    console.log(visCard)
+
+    // const visCardOne = firstVisualCards.find(firstVisualCard => item.id === firstVisualCard.id)
+    //     return <FirstThenCard key={firstVisualCard.id} visualCard={firstVisualCard} onClickedCard={handleRemoveFromFirstThenBoard} onClickDelete={handleDeleteVisualCard}/>
+    // }
+    // if (firstVisualCards[0]) {
+    //     return <FirstThenCard key={firstVisualCard.id} visualCard={firstVisualCard} onClickedCard={handleRemoveFromFirstThenBoard} onClickDelete={handleDeleteVisualCard}/>
+    // }  //alternative code to try to assign cards to first/then columns
+
+    
+    // console.log(visCard)
     return(
         <div className="first-then-board-container" >
             <h3 className="first-then-board">
@@ -17,7 +26,9 @@ function FirstThenBoard({ firstVisualCards, handleRemoveFromFirstThenBoard, hand
                 <div>Then</div>
                 <div>Last</div>
             </h3>
-            { visCard }
+            <div className="first-then-board-visual-cards-container">
+                { visCard }
+            </div>
         </div>
     )
 }

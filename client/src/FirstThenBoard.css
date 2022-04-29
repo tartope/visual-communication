@@ -1,7 +1,10 @@
 .first-then-board-container{
-    max-width: 1200px;
-    margin-left: 150px;
+    width: 1000px;
+    height: 500px;
+    margin-left: 90px;
     margin-right: 100px;
+    padding: 5px;
+    border: solid black 2px;
 }
 
 .first-then-board{
@@ -12,19 +15,13 @@
     font-weight: 100;
 }
 
-
-/* table {
-    font-family: optima, segoe, segoe ui, candara, calibri, arial, sans-serif;
-    font-size: 50px;
-    font-weight: 100;
-    border: 2px solid #0D1B2A;
-    border-radius:4px;
-    width: 1180px;
-    height: 500px;
-    border-collapse: collapse;
+.first-then-board-visual-cards-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 7em;
 }
 
-td, th {
-    border: 1px solid #0D1B2A;
-    text-align: center;
-} */
+/* setup of card container:
+grid template column means repeat 3 columns/times, at 1 fraction of the space/page)
+grid gap creates a gap between cards */
+

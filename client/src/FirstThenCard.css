@@ -1,8 +1,7 @@
 .visual-card{
-    min-width: 200px;
+    width: 200px;
     min-height: 150px;
     margin-top: 10px;
-    margin-right: 1300px;
     background-color: #a5a6f6;
     border: solid black 2px;
     border-radius: 10px;
@@ -27,3 +26,6 @@ img{
     justify-content: space-between;
     margin: 2px;
 }
+
+/* setup of card in container::
+1. changed to width, from min-width to keep cards in container the same size as cards in the collection. */

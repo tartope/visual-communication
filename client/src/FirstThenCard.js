@@ -9,7 +9,7 @@ function FirstThenCard({ visualCard, onClickedCard, onClickDelete }){
             <h3> {visualCard.name} </h3>
         
             <div className="visual-card-footer"> 
-                <button className='edit'>edit</button>
+                {/* <button className='edit'>edit</button> */}
                 <button className='delete' onClick={(event) =>{
                     event.stopPropagation()
                     onClickDelete(visualCard)
