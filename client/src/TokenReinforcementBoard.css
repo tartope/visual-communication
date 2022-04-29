@@ -1,0 +1,26 @@
+.token-reinforcement-board-container{
+    width: 1000px;
+    height: 500px;
+    margin-left: 90px;
+    margin-right: 100px;
+    padding: 5px;
+    border: solid black 2px;
+    /* display: flex; */
+}
+.token-reinforcement-board-container-one{
+    display: flex;
+}
+
+.token-reinforcement-board{
+    font-family: optima, segoe, segoe ui, candara, calibri, arial, sans-serif;
+    font-size: 50px;
+    font-weight: 100;
+    margin-right: 300px;
+}
+
+.token-reinforcement-board-square{
+    border: solid black 2px;
+    width: 150px;
+    height: 150px; 
+    margin-top: 50px;
+}

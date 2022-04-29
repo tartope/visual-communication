@@ -4,7 +4,7 @@ import NavBar from "./NavBar";
 import Home from "./Home";
 import About from "./About";
 import FirstThenPage from "./FirstThenPage";
-import TokenReinforcement from "./TokenReinforcementBoard";
+import TokenReinforcementPage from "./TokenReinforcementPage";
 import Contact from "./Contact";
 import './App.css';
 
@@ -16,7 +16,7 @@ function App() {
                 <Route exact path ="/" element= { <Home /> } /> 
                 <Route path ="/about" element= { <About  /> } /> 
                 <Route path="/firstthenboard" element= { <FirstThenPage /> } /> 
-                <Route path="/tokenreinforcementboard" element= { <TokenReinforcement /> } />
+                <Route path="/tokenreinforcementboard" element= { <TokenReinforcementPage /> } />
                 <Route path="/contact" element= { <Contact /> } />
           </Routes>
     </div>

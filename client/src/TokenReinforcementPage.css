@@ -1,0 +1,14 @@
+.token-reinforcement-page{
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.left{
+    width: 215px;
+    margin: 5px;
+}
+
+.right{
+    width: 1100px;
+    margin: 5px;
+}

@@ -1,26 +1,29 @@
-import React, { useEffect, useState } from "react";
-import TokenReinforcementCardCollection from "./TokenReinforcementCardCollection"
+import React from "react";
+import TokenReinforcementCard from "./TokenReinforcementCard";
+import './TokenReinforcementBoard.css'; 
 
-const visualCardsAPI = "/visual_cards"
+function TokenReinforcementBoard({ tokenVisualCards }){
+    console.log(!!tokenVisualCards.length);
+    const visCard = tokenVisualCards.map(tokenVisualCard => {
+        // console.log(tokenVisualCard) 
+        return <TokenReinforcementCard key={tokenVisualCard.id} visualCard={tokenVisualCard} />
 
-function TokenReinforcement(){
-
-    const [visualCards, setVisualCards] = useState([])
-
-    useEffect(()=>{
-        fetch(visualCardsAPI)
-        .then(response => response.json())
-        .then(visualCardsData => {
-            // console.log(visualCardsData)
-            setVisualCards(visualCardsData)
-        })
-    }, [])
+    })
 
     return(
-        <div>
-            <TokenReinforcementCardCollection visualCards={visualCards} />
+        <div className="token-reinforcement-board-container">
+            <div className="token-reinforcement-board-container-one" >
+                <h3 className="token-reinforcement-board">
+                    I am working for...
+                </h3>
+                {/* <div className="token-reinforcement-board-square" ></div> */}
+                {!!tokenVisualCards.length? visCard : <div className="token-reinforcement-board-square"></div>}
+            </div>
+            {/* <div className="token-reinforcement-board-visual-cards-container" >
+                { visCard }
+            </div> */}
         </div>
     )
 }
 
-export default TokenReinforcement;
+export default TokenReinforcementBoard;

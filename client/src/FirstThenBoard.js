@@ -24,7 +24,7 @@ function FirstThenBoard({ firstVisualCards, handleRemoveFromFirstThenBoard, hand
             <h3 className="first-then-board">
                 <div>First</div>
                 <div>Then</div>
-                <div>Last</div>
+                <div>Last</div> 
             </h3>
             <div className="first-then-board-visual-cards-container">
                 { visCard }

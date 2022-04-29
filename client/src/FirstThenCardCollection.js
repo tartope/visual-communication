@@ -11,7 +11,7 @@ function FirstThenCardCollection({ visualCards, handleAddToFirstThenBoard, handl
     })
 
     return(
-        <div className="first-then-card-collection">
+        <div className="first-then-card-collection" >
             {visCard}
         </div>
     )
