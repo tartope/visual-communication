@@ -1,6 +1,6 @@
 import React from "react";
 
-function TokenReinforcementCard({ visualCard, onClickedCard }){
+function TokenReinforcementCard({ visualCard, onClickedCard, onClickDelete }){
 
     return(
         <div className="visual-card" onClick={()=>onClickedCard(visualCard)}>
@@ -9,7 +9,10 @@ function TokenReinforcementCard({ visualCard, onClickedCard }){
         
             <div className="visual-card-footer"> 
                 {/* <button className='edit'>edit</button> */}
-                <button className='delete'>delete</button>
+                <button className='delete' onClick={(event) =>{
+                    event.stopPropagation()
+                    onClickDelete(visualCard)
+                }}>delete</button>
             </div>
         </div>
     )

@@ -33,13 +33,24 @@ function TokenReinforcementPage(){
         setTokenVisualCards(removeVisualCard)
     }
 
+    function handleDeleteVisualCard(deletedVisualCard){
+        // console.log(deletedVisualCard)
+        fetch(`${visualCardsAPI}/${deletedVisualCard.id}`, {
+        method: 'DELETE'
+        });
+        const deleteVisualCards = visualCards.filter(item => item.id !== deletedVisualCard.id)
+        setVisualCards(deleteVisualCards);
+        const deleteTokenVisualCards = tokenVisualCards.filter(item => item.id !== deletedVisualCard.id)
+        setTokenVisualCards(deleteTokenVisualCards);
+    }
+
     return(
         <div className="token-reinforcement-page">
             <div className="left">
-                <TokenReinforcementCardCollection visualCards={visualCards} handleAddToTokenReinforcementBoard={handleAddToTokenReinforcementBoard} />
+                <TokenReinforcementCardCollection visualCards={visualCards} handleAddToTokenReinforcementBoard={handleAddToTokenReinforcementBoard} handleDeleteVisualCard={handleDeleteVisualCard} />
             </div>
             <div className="right">
-                <TokenReinforcementBoard tokenVisualCards={tokenVisualCards} handleRemoveFromTokenReinforcementBoard={handleRemoveFromTokenReinforcementBoard} />
+                <TokenReinforcementBoard tokenVisualCards={tokenVisualCards} handleRemoveFromTokenReinforcementBoard={handleRemoveFromTokenReinforcementBoard} handleDeleteVisualCard={handleDeleteVisualCard} />
             </div>
         </div>
     )
