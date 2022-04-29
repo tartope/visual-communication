@@ -2,11 +2,11 @@ import React from "react";
 import TokenReinforcementCard from "./TokenReinforcementCard";
 import './TokenReinforcementBoard.css'; 
 
-function TokenReinforcementBoard({ tokenVisualCards, handleRemoveFromTokenReinforcementBoard }){
+function TokenReinforcementBoard({ tokenVisualCards, handleRemoveFromTokenReinforcementBoard, handleDeleteVisualCard }){
     console.log(!!tokenVisualCards.length);
     const visCard = tokenVisualCards.map(tokenVisualCard => {
         // console.log(tokenVisualCard) 
-        return <TokenReinforcementCard key={tokenVisualCard.id} visualCard={tokenVisualCard} onClickedCard={handleRemoveFromTokenReinforcementBoard} />
+        return <TokenReinforcementCard key={tokenVisualCard.id} visualCard={tokenVisualCard} onClickedCard={handleRemoveFromTokenReinforcementBoard} onClickDelete={handleDeleteVisualCard} />
 
     })
 
