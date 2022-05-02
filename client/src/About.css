@@ -1,11 +1,11 @@
 .about h2{
     display: flex;
     justify-content: center;
-    margin-top: 180px;
-    margin-left: 300px;
-    margin-right: 300px;
+    margin-top: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
     background-color: #a5a6f6;
-    padding: 50px 100px;
+    padding: 5%;
     font-family: optima, segoe, segoe ui, candara, calibri, arial, sans-serif;
     font-weight: 100;
 }
