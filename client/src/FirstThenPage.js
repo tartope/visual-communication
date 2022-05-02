@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import FirstThenCardCollection from "./FirstThenCardCollection"
 import FirstThenBoard from "./FirstThenBoard"
+import NewVisualForm from "./NewVisualForm"
 import './FirstThenPage.css';
 
 
@@ -45,6 +46,21 @@ function FirstThenPage(){
         setFirstVisualCards(deleteFirstVisualCards);
     }
 
+    function handleNewVisualCard(visualCard){
+        fetch(visualCardsAPI, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(visualCard),
+        })
+        .then(response => response.json())
+        .then(json => {
+        setVisualCards([...visualCards, json])
+        })
+        .catch(err => console.error(err))
+    }
+
     return(
         <div className="first-then-page" >
             <div className="left">
@@ -52,6 +68,7 @@ function FirstThenPage(){
             </div>
             <div className="right">
                 <FirstThenBoard firstVisualCards={firstVisualCards} handleRemoveFromFirstThenBoard={handleRemoveFromFirstThenBoard} handleDeleteVisualCard={handleDeleteVisualCard} />
+                <NewVisualForm handleNewVisualCard={handleNewVisualCard} />
             </div>
         </div>
     )
