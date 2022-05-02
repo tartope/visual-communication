@@ -26,8 +26,19 @@
     border-radius: 5px;
 }
 
+input[type="radio"]{
+    display: none;
+}
+
+.stars{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 70vh;
+    
+}
+
 .star{
-    color: gold;
-    position: absolute;
-    bottom: 20%;
+    cursor: pointer;
+    transition: color 200ms;
 }

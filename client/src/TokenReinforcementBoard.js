@@ -1,27 +1,19 @@
 import React, {useState} from "react";
 import TokenReinforcementCard from "./TokenReinforcementCard";
-import { BsStarFill, BsStar } from "react-icons/bs";
+import { BsStarFill } from "react-icons/bs";
 import './TokenReinforcementBoard.css'; 
 
 function TokenReinforcementBoard({ tokenVisualCards, handleRemoveFromTokenReinforcementBoard, handleDeleteVisualCard }){
     // console.log(!!tokenVisualCards.length);
 
-    const [emptyStar, setEmptyStar] = useState(null)
-    const [filledStar, setFilledStar] = useState(true)
+    const [rating, setRating] = useState(null);
+    const [hover, setHover] = useState(null);
 
     const visCard = tokenVisualCards.map(tokenVisualCard => {
         // console.log(tokenVisualCard) 
         return <TokenReinforcementCard key={tokenVisualCard.id} visualCard={tokenVisualCard} onClickedCard={handleRemoveFromTokenReinforcementBoard} onClickDelete={handleDeleteVisualCard} />
 
     })
-
-    function toggleStar(){
-        if(emptyStar === true){
-        setEmptyStar(emptyStar)
-        }else{
-            
-        }
-    }
 
     return(
         <div className="token-reinforcement-board-container">
@@ -35,8 +27,28 @@ function TokenReinforcementBoard({ tokenVisualCards, handleRemoveFromTokenReinfo
             {/* <div className="token-reinforcement-board-visual-cards-container" >
                 { visCard }
             </div> */}
-            <div className="star">
-                <BsStar size={120} onClick={()=>console.log('click1')}/> <BsStar size={120} onClick={()=>console.log('click2')}/> <BsStar size={120} onClick={()=>console.log('click3')}/> <BsStar size={120} onClick={()=>console.log('click4')}/> <BsStar size={120} onClick={()=>console.log('click5')}/>
+            <div className="stars">
+                {[...Array(5)].map((star, i) =>{
+                    const ratingValue = i + 1;
+
+                    return (
+                        <label>
+                            <input 
+                                type="radio" 
+                                name="rating" 
+                                value={ratingValue}
+                                onClick={()=> setRating(ratingValue)}
+                            />
+                            <BsStarFill 
+                                className="star" 
+                                color={ratingValue <= (hover || rating) ? "#ffc107" : "#e4e5e9"} 
+                                size={120} 
+                                onMouseEnter={()=> setHover(ratingValue)}
+                                onMouseLeave={()=> setHover(null)}
+                            />
+                        </label>
+                    );
+                })}
             </div>
         </div>
     )
@@ -45,3 +57,7 @@ function TokenReinforcementBoard({ tokenVisualCards, handleRemoveFromTokenReinfo
 export default TokenReinforcementBoard;
 
 // per console, '!!tokenVisualCards.length' is false. so ternary: if false put 'visCard', else put blank div.
+
+// instead of: {/* <BsStar size={120} onClick={()=>console.log('click1')}/> <BsStar size={120} onClick={()=>console.log('click2')}/> <BsStar size={120} onClick={()=>console.log('click3')}/> <BsStar size={120} onClick={()=>console.log('click4')}/> <BsStar size={120} onClick={()=>console.log('click5')}/> */}, can map over for multiple stars.
+
+// stars: npm install react-icons, choose a reat icon and import, setState of icon, add icon <Child />, can use .map for more than one, create rating variable, add click event to input, add color and mouseover to child, adjust CSS to preferences.
