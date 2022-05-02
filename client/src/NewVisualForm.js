@@ -1,5 +1,5 @@
 import React from "react";
-// import './About.css';
+import './NewVisualForm.css';
 
 function NewVisualForm({ handleNewVisualCard }){
 
@@ -21,20 +21,21 @@ function NewVisualForm({ handleNewVisualCard }){
 
     return(
         <div className="new-visual-form-container">
+            <h4>Customize a visual here:</h4>
             <form className="new-visual-form" onSubmit={handleFormSubmit} >
 
-                    <div>
-                        <label htmlFor="image">Image</label>
-                        <input id="image" type="text" placeholder="Visual Image" />
-                    </div>
+                <div>
+                    <label htmlFor="image">Image</label>
+                    <input id="image" type="text" placeholder="Image link" />
+                </div>
 
-                    <div>
-                        <label htmlFor="name">Name</label>
-                        <input id="name" type="text" placeholder="Visual Name" />
-                    </div>
-                    
-                    <input type="submit" value="Add Visual" />
-                </form>
+                <div>
+                    <label htmlFor="name">Name</label>
+                    <input id="name" type="text" placeholder="Visual card name" />
+                </div>
+                
+                <input type="submit" value="Submit" />
+            </form>
             
         </div>
     )

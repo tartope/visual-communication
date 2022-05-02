@@ -5,7 +5,7 @@
     margin-right: 1%;
     padding: .5%;
     border: solid black 2px;
-    /* display: flex; */
+    border-radius: 5px;
 }
 .token-reinforcement-board-container-one{
     display: flex;
@@ -23,6 +23,7 @@
     width: 15%;
     height: 150px; 
     margin-top: 5%;
+    border-radius: 5px;
 }
 
 .star{
