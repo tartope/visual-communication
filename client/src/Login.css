@@ -1,0 +1,11 @@
+.login-form{
+    margin-top: 15%;
+    margin-left: 35%;
+    margin-right: 35%;
+    padding: 1%;
+    background-color: #a5a6f6;
+    font-family: optima, segoe, segoe ui, candara, calibri, arial, sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    text-align: center;
+}

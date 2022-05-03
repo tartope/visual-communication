@@ -1,15 +1,15 @@
 import { useState } from "react";
 import LoginForm from "./LoginForm";
 import SignUpForm from "./SignUpForm"
-// import "./Login.css"
+import "./Login.css"
 
 function Login({ setUser }) {
 
     const [showLogin, setShowLogin] = useState(true);
 
     return (
-        <wrapper className= "login">
-            <div className= "login"> 
+        <wrapper className="login">
+            <div className="login-form"> 
             {/* <div className="empty" > 
 
             </div>   */}

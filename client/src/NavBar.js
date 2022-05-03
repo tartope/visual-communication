@@ -12,7 +12,7 @@ function NavBar({ user, setUser }){
                 setUser(null);
                 navigate("/");
                 console.log('logout success')
-            alert (`Goodbye`)
+            alert (`Goodbye!`)
             }
         });
     }

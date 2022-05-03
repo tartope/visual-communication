@@ -37,7 +37,7 @@ function SignUpForm({ setUser }) {
         <form className = "signup" onSubmit={handleSubmit}>
             <div className="form-stars">
                 <div>
-                    <label htmlFor="username" className="signup" > Username </label>
+                    <label htmlFor="username" className="signup" >Username</label>
                     <input
                     type="text"
                     id="username"

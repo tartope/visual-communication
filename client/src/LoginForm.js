@@ -20,9 +20,9 @@ function LoginForm({ setUser }) {
         }).then((r) => {
         setIsLoading(false);
         if (r.ok) {
-            navigate("/");
+            navigate("/firstthenboard");
             console.log('login success')
-            alert (`Welcome ${username}`)
+            alert (`Welcome ${username}!`)
             r.json().then((user) => setUser(user));
         } else {
             console.log('login failed')
