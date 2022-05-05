@@ -7,7 +7,7 @@ import FirstThenPage from "./FirstThenPage";
 import TokenReinforcementPage from "./TokenReinforcementPage";
 import Contact from "./Contact";
 import Login from "./Login";
-import LoginForm from "./LoginForm";
+// import LoginForm from "./LoginForm";
 import './App.css';
 
 function App() {

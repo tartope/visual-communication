@@ -34,7 +34,7 @@ function NewVisualForm({ handleNewVisualCard }){
                     <input id="name" type="text" placeholder="Visual card name" />
                 </div>
                 
-                <input type="submit" value="Submit" />
+                <input className="submit" type="submit" value="Submit" />
             </form>
             
         </div>
