@@ -7,7 +7,13 @@
     border-radius: 10px;
     font-family: optima, segoe, segoe ui, candara, calibri, arial, sans-serif;
     font-weight: 100;
-    /* overflow: auto; */
+    transition: 1s;
+}
+
+.visual-card:hover{
+    transform: scale(1.1);
+    box-shadow: 2px 2px 2px #000;
+    z-index: 2;
 }
 
 img{

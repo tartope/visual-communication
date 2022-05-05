@@ -1,3 +1,7 @@
 .token-reinforcement-card-collection{
-    overflow: auto;
+    overflow-y: auto;
+    width: 80%;
+    height: 35%;
+    background-color: #f1f0ff;
+    padding-left: 5%;
 }
