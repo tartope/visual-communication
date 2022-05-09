@@ -19,7 +19,17 @@ VisualCard.create(name: "legos", image: "/images/legos.png")
 VisualCard.create(name: "listen to music", image: "/images/listen-to-music.png")
 VisualCard.create(name: "play", image: "/images/play.png")
 VisualCard.create(name: "tablet", image: "/images/tablet.png")
-VisualCard.create(name: "work", image: "/images/work.png") 
+VisualCard.create(name: "work", image: "/images/work.png")
+VisualCard.create(name: "kinetic sand", image: "/images/kinetic-sand.png")
+VisualCard.create(name: "blocks", image: "/images/blocks.png")
+VisualCard.create(name: "sensory-bin", image: "/images/sensory-bin.png")
+VisualCard.create(name: "barney", image: "/images/barney.png")
+VisualCard.create(name: "pop it fidget", image: "/images/pop-it-fidget.png")
+VisualCard.create(name: "fruit snack", image: "/images/fruit-snack.png")
+VisualCard.create(name: "playdough", image: "/images/playdough.png")
+VisualCard.create(name: "lilo and stitch", image: "/images/lilo-and-stitch.png")
+VisualCard.create(name: "skittles", image: "/images/skittles.png")
+VisualCard.create(name: "video game", image: "/images/video-game.png") 
 
 
 puts "Done seeding!"

@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import FirstThenCardCollection from "./FirstThenCardCollection"
 import FirstThenBoard from "./FirstThenBoard"
 import NewVisualForm from "./NewVisualForm"
+import Search from "./Search"
 import './FirstThenPage.css';
 
 
@@ -9,8 +10,9 @@ const visualCardsAPI = "/visual_cards"
 
 function FirstThenPage(){
 
-    const [visualCards, setVisualCards] = useState([])
-    const [firstVisualCards, setFirstVisualCards] = useState([])
+    const [visualCards, setVisualCards] = useState([]);
+    const [firstVisualCards, setFirstVisualCards] = useState([]);
+    const [searchText, setSearchText] = useState("");
 
     useEffect(()=>{
         fetch(visualCardsAPI)
@@ -61,10 +63,19 @@ function FirstThenPage(){
         .catch(err => console.error(err))
     }
 
+    function handleSearch(searchText){
+        setSearchText(searchText);
+    }
+    const filterVisualCards = visualCards.filter((card)=>{
+        const upperSearchText = searchText.toUpperCase();
+        return card.name.toUpperCase().includes(upperSearchText);
+    })
+
     return(
         <div className="first-then-page" >
             <div className="left">
-                <FirstThenCardCollection visualCards={visualCards} handleAddToFirstThenBoard={handleAddToFirstThenBoard} handleDeleteVisualCard={handleDeleteVisualCard} />
+                <Search handleSearch={handleSearch} />
+                <FirstThenCardCollection visualCards={filterVisualCards} handleAddToFirstThenBoard={handleAddToFirstThenBoard} handleDeleteVisualCard={handleDeleteVisualCard} />
             </div>
             <div className="right">
                 <FirstThenBoard firstVisualCards={firstVisualCards} handleRemoveFromFirstThenBoard={handleRemoveFromFirstThenBoard} handleDeleteVisualCard={handleDeleteVisualCard} />

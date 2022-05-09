@@ -1,5 +1,15 @@
-body{
+/* body{
   margin: 0;
+} */
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+}
+
+#root {
+  height: 100vh;
 }
 
 button{

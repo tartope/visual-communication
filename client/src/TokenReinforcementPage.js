@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react";
 import TokenReinforcementCardCollection from "./TokenReinforcementCardCollection";
 import TokenReinforcementBoard from "./TokenReinforcementBoard";
+import Search from "./Search"
 import './TokenReinforcementPage.css';
 
 const visualCardsAPI = "/visual_cards"
 
 function TokenReinforcementPage(){
 
-    const [visualCards, setVisualCards] = useState([])
-    const [tokenVisualCards, setTokenVisualCards] = useState([])
+    const [visualCards, setVisualCards] = useState([]);
+    const [tokenVisualCards, setTokenVisualCards] = useState([]);
+    const [searchText, setSearchText] = useState("");
 
     useEffect(()=>{
         fetch(visualCardsAPI)
@@ -44,10 +46,19 @@ function TokenReinforcementPage(){
         setTokenVisualCards(deleteTokenVisualCards);
     }
 
+    function handleSearch(searchText){
+        setSearchText(searchText);
+    }
+    const filterVisualCards = visualCards.filter((card)=>{
+        const upperSearchText = searchText.toUpperCase();
+        return card.name.toUpperCase().includes(upperSearchText);
+    })
+
     return(
         <div className="token-reinforcement-page">
             <div className="left">
-                <TokenReinforcementCardCollection visualCards={visualCards} handleAddToTokenReinforcementBoard={handleAddToTokenReinforcementBoard} handleDeleteVisualCard={handleDeleteVisualCard} />
+                <Search handleSearch={handleSearch} />
+                <TokenReinforcementCardCollection visualCards={filterVisualCards} handleAddToTokenReinforcementBoard={handleAddToTokenReinforcementBoard} handleDeleteVisualCard={handleDeleteVisualCard} />
             </div>
             <div className="right">
                 <TokenReinforcementBoard tokenVisualCards={tokenVisualCards} handleRemoveFromTokenReinforcementBoard={handleRemoveFromTokenReinforcementBoard} handleDeleteVisualCard={handleDeleteVisualCard} />

@@ -24,7 +24,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className="app">
       <NavBar user={user} setUser={setUser} />
           <Routes>
                 <Route exact path ="/" element= { <Home /> } /> 

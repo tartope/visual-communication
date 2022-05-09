@@ -1,14 +1,18 @@
 .token-reinforcement-page{
     display: flex;
-    /* justify-content: space-between; */
 }
 
 .left{
     width: 20%;
     margin: 0;
+    overflow-y: auto;
+    height: 100vh;
 }
 
 .right{
     width: 80%;
     margin: .5%;
+    border: solid black 2px;
+    border-radius: 5px;
+    height: 70vh;
 }
