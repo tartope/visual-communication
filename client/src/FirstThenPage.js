@@ -72,14 +72,16 @@ function FirstThenPage(){
     })
 
     return(
-        <div className="first-then-page" >
-            <div className="left">
-                <Search handleSearch={handleSearch} />
-                <FirstThenCardCollection visualCards={filterVisualCards} handleAddToFirstThenBoard={handleAddToFirstThenBoard} handleDeleteVisualCard={handleDeleteVisualCard} />
-            </div>
-            <div className="right">
-                <FirstThenBoard firstVisualCards={firstVisualCards} handleRemoveFromFirstThenBoard={handleRemoveFromFirstThenBoard} handleDeleteVisualCard={handleDeleteVisualCard} />
-                <NewVisualForm handleNewVisualCard={handleNewVisualCard} />
+        <div>
+            <Search handleSearch={handleSearch} />
+            <div className="first-then-page" >
+                <div className="left">
+                    <FirstThenCardCollection visualCards={filterVisualCards} handleAddToFirstThenBoard={handleAddToFirstThenBoard} handleDeleteVisualCard={handleDeleteVisualCard} />
+                </div>
+                <div className="right">
+                    <FirstThenBoard firstVisualCards={firstVisualCards} handleRemoveFromFirstThenBoard={handleRemoveFromFirstThenBoard} handleDeleteVisualCard={handleDeleteVisualCard} />
+                    <NewVisualForm handleNewVisualCard={handleNewVisualCard} />
+                </div>
             </div>
         </div>
     )

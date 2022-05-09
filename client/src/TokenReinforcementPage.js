@@ -55,13 +55,15 @@ function TokenReinforcementPage(){
     })
 
     return(
-        <div className="token-reinforcement-page">
-            <div className="left">
-                <Search handleSearch={handleSearch} />
-                <TokenReinforcementCardCollection visualCards={filterVisualCards} handleAddToTokenReinforcementBoard={handleAddToTokenReinforcementBoard} handleDeleteVisualCard={handleDeleteVisualCard} />
-            </div>
-            <div className="right">
-                <TokenReinforcementBoard tokenVisualCards={tokenVisualCards} handleRemoveFromTokenReinforcementBoard={handleRemoveFromTokenReinforcementBoard} handleDeleteVisualCard={handleDeleteVisualCard} />
+        <div>
+            <Search handleSearch={handleSearch} />
+            <div className="token-reinforcement-page">
+                <div className="left">
+                    <TokenReinforcementCardCollection visualCards={filterVisualCards} handleAddToTokenReinforcementBoard={handleAddToTokenReinforcementBoard} handleDeleteVisualCard={handleDeleteVisualCard} />
+                </div>
+                <div className="right">
+                    <TokenReinforcementBoard tokenVisualCards={tokenVisualCards} handleRemoveFromTokenReinforcementBoard={handleRemoveFromTokenReinforcementBoard} handleDeleteVisualCard={handleDeleteVisualCard} />
+                </div>
             </div>
         </div>
     )

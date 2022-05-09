@@ -1,0 +1,10 @@
+.search{
+    margin-bottom: .5%;
+    text-align: center;
+}
+
+#search{
+    font-family: optima, segoe, segoe ui, candara, calibri, arial, sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+}
