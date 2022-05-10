@@ -20,10 +20,10 @@
 
 .token-reinforcement-board-square{
     border: solid black 2px;
-    width: 15%;
-    height: 150px; 
-    margin-top: 5%;
-    border-radius: 5px;
+    width: 200px;
+    min-height: 150px;
+    margin-top: 10px;
+    border-radius: 10px;
 }
 
 input[type="radio"]{

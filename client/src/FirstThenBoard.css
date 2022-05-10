@@ -9,8 +9,11 @@
 }
 
 .first-then-board{
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-between; */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 4em;
     font-family: optima, segoe, segoe ui, candara, calibri, arial, sans-serif;
     font-size: 50px;
     font-weight: 100;
