@@ -1,9 +1,13 @@
-.about h2{
+.about{
+    display: flex;
+}
+
+.about-summary h2{
     display: flex;
     justify-content: center;
-    margin-top: 10%;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-top: 25%;
+    margin-left: 15%;
+    margin-right: 10%;
     /* background-color: #a5a6f6; */
     background-image: radial-gradient(circle farthest-corner at center, rgba(93, 180, 252, 1) 35%, rgba(165, 166, 246, 1) 65%, rgba(215, 151, 221, 1) 100%);
     padding: 5%;
@@ -13,7 +17,14 @@
     transition: 1s;
 }
 
-.about h2:hover{
+.about-summary h2:hover{
     transform: scale(1.1);
     z-index: 2;
+}
+
+.about-demo{
+    border: solid black 1px;
+    margin-top: 10%;
+    margin-right: 5%;
+    margin-bottom: 5%;
 }
