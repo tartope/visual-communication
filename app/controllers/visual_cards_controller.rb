@@ -2,7 +2,7 @@ class VisualCardsController < ApplicationController
 rescue_from ActiveRecord::RecordNotFound, with: :record_not_found_response
 
     def index 
-        visual_cards = VisualCard.all
+        visual_cards = VisualCard.all.order(:name)
         render json: visual_cards, status: :ok
     end
 
