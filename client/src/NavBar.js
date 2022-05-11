@@ -22,8 +22,10 @@ function NavBar({ user, setUser }){
             <div className="nav">
                 <NavLink exact to="/">Home</NavLink>
                 <NavLink to="/about">About</NavLink>
-                <NavLink to="/firstthenboard"> First/Then </NavLink>
-                <NavLink to="/tokenreinforcementboard">Token Reinforcement </NavLink>
+                { user ? <NavLink to="/firstthenboard">First/Then</NavLink> : null }
+                { user ? <NavLink to="/tokenreinforcementboard">Token Reinforcement</NavLink> : null }
+                {/* <NavLink to="/firstthenboard"> First/Then </NavLink>
+                <NavLink to="/tokenreinforcementboard">Token Reinforcement </NavLink> */}
                 <NavLink to="/contact"> Contact </NavLink>
                 <NavLink to="/login"> Login/Sign Up </NavLink>
                 <button className="logout-btn" onClick={ handleLogoutClick } > Logout </button>
