@@ -9,4 +9,11 @@
     padding: 5%;
     font-family: optima, segoe, segoe ui, candara, calibri, arial, sans-serif;
     font-weight: 100;
+    box-shadow: 10px 10px 10px rgba(45,55,68,0.30);
+    transition: 1s;
+}
+
+.about h2:hover{
+    transform: scale(1.1);
+    z-index: 2;
 }

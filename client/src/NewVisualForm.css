@@ -9,6 +9,7 @@
     font-family: optima, segoe, segoe ui, candara, calibri, arial, sans-serif;
     font-size: 20px;
     font-weight: 100;
+    box-shadow: 10px 10px 10px rgba(45,55,68,0.30);
 }
 
 .new-visual-form-container h4{
