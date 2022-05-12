@@ -28,7 +28,7 @@ function NavBar({ user, setUser }){
                 <NavLink to="/tokenreinforcementboard">Token Reinforcement </NavLink> */}
                 <NavLink to="/contact"> Contact </NavLink>
                 <NavLink to="/login"> Login/Sign Up </NavLink>
-                <button className="logout-btn" onClick={ handleLogoutClick } > Logout </button>
+                { user ? <button className="logout-btn" onClick={ handleLogoutClick } > Logout </button> : null }
             </div>
         </div>
     )
