@@ -6,7 +6,7 @@ A React front-end, Rails back-end web application. This is a convenient visual c
 ## Code Style
 Standard
 
-## Screenshots
+## Screenshots/Gifs
 ![Gif](https://media.giphy.com/media/ptUBsoKOYiW2YyZdQx/giphy.gif)
 
 ## Tech/Framework used
