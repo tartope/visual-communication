@@ -25,6 +25,9 @@ You will also see any lint errors in the console.
 ### `rails start` or `rails s` 
 Runs the backend server.
 
+## Project Link
+[Visual Communication](https://visual-communication.herokuapp.com/)
+
 ---
 
 # Project Template: React/Rails API
