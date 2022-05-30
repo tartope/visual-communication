@@ -92,7 +92,7 @@ export default FirstThenPage;
 
 // if CORS error:
 // 1. go to Gemfile and add: "gem 'rack-cors'"
-// 2. got to confie/cors.rb and add:   Rails.application.config.middleware.insert_before 0, Rack::Cors do
+// 2. got to config/initializers/cors.rb and add:   Rails.application.config.middleware.insert_before 0, Rack::Cors do
 //                                         allow do
 //                                             origins '*'
 

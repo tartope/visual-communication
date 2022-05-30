@@ -1,3 +1,32 @@
+# Visual Communication
+
+## Motivation
+A React front-end, Rails back-end web application. This is a convenient visual communication tool for special education staff who work with students on the autism spectrum.
+
+## Code Style
+Standard
+
+## Screenshots
+![Gif](https://media.giphy.com/media/ptUBsoKOYiW2YyZdQx/giphy.gif)
+
+## Tech/Framework used
+React frontend, Rails backend with postgreSQL database.
+
+## Installation
+### `npm install`
+Installs all of the dependencies listed in the package.json file.
+### `npm start --prefix client`
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+### `rails start` or `rails s` 
+Runs the backend server.
+
+---
+
 # Project Template: React/Rails API
 
 ## Description
