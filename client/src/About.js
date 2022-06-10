@@ -12,7 +12,7 @@ function About(){
                 </h2>
             </div>
             <div className="about-demo">
-                <ReactPlayer controls url="https://youtu.be/sVWZ96P96tc"/>
+                <ReactPlayer controls url="https://youtu.be/o7zeHodL8zk"/>
             </div>
         </div>
     )
