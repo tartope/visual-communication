@@ -6,6 +6,12 @@ A React front-end, Rails back-end web application. This is a convenient visual c
 ## Code Style
 Standard
 
+## Wire Frame
+[Mock up](https://www.figma.com/proto/d6QHCXKOimbgqWEhpVAREd/Phase-5-project?node-id=1%3A2)
+
+## Entity Relationship Diagram
+![phase5-ERD](https://user-images.githubusercontent.com/96999939/175435015-0f079c27-1da0-4ceb-8717-c72f117214b0.png)
+
 ## Screenshots/Gifs
 ![Gif](https://media.giphy.com/media/ptUBsoKOYiW2YyZdQx/giphy.gif)
 
