@@ -3,9 +3,9 @@ import FirstThenCard from "./FirstThenCard";
 import './FirstThenCardCollection.css';
 
 function FirstThenCardCollection({ visualCards, handleAddToFirstThenBoard, handleDeleteVisualCard }){
-    // console.log(visualCards)
+    
     const visCard = visualCards.map(visualCard => {
-        // console.log(visualCard)
+        
         return <FirstThenCard key={visualCard.id} visualCard={visualCard} onClickedCard={handleAddToFirstThenBoard} onClickDelete={handleDeleteVisualCard} />
 
     })

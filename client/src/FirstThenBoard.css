@@ -4,13 +4,9 @@
     margin-left: 1%;
     margin-right: 1%;
     padding: .5%;
-    /* border: solid black 2px;
-    border-radius: 5px; */
 }
 
 .first-then-board{
-    /* display: flex;
-    justify-content: space-between; */
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 4em;

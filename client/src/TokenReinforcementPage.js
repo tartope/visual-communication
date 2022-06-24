@@ -16,7 +16,6 @@ function TokenReinforcementPage(){
         fetch(visualCardsAPI)
         .then(response => response.json())
         .then(visualCardsData => {
-            // console.log(visualCardsData)
             setVisualCards(visualCardsData)
         })
     }, [])
@@ -36,7 +35,6 @@ function TokenReinforcementPage(){
     }
 
     function handleDeleteVisualCard(deletedVisualCard){
-        // console.log(deletedVisualCard)
         fetch(`${visualCardsAPI}/${deletedVisualCard.id}`, {
         method: 'DELETE'
         });

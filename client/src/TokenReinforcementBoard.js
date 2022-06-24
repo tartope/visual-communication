@@ -9,10 +9,8 @@ function TokenReinforcementBoard({ tokenVisualCards, handleRemoveFromTokenReinfo
     const [rating, setRating] = useState(null);
     const [hover, setHover] = useState(null);
 
-    const visCard = tokenVisualCards.map(tokenVisualCard => {
-        // console.log(tokenVisualCard) 
+    const visCard = tokenVisualCards.map(tokenVisualCard => { 
         return <TokenReinforcementCard key={tokenVisualCard.id} visualCard={tokenVisualCard} onClickedCard={handleRemoveFromTokenReinforcementBoard} onClickDelete={handleDeleteVisualCard} />
-
     })
 
     return(

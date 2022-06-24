@@ -18,12 +18,6 @@ rescue_from ActiveRecord::RecordNotFound, with: :record_not_found_response
         render json: {error: invalid.record.errors.full_messages}, status: :unprocessable_entity
     end
 
-    def update 
-        visual_card = find_visual_card
-        visual_card.update!(visual_card_params)
-        render json: visual_card, status: :ok
-    end
-
     def destroy
         visual_card = find_visual_card
         visual_card.destroy
