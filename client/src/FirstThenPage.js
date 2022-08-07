@@ -93,14 +93,14 @@ export default FirstThenPage;
 // if CORS error:
 // 1. go to Gemfile and add: "gem 'rack-cors'"
 // 2. got to config/initializers/cors.rb and add:   Rails.application.config.middleware.insert_before 0, Rack::Cors do
-//                                         allow do
-//                                             origins '*'
+//                                                      allow do
+//                                                          origins '*'
 
-//                                             resource '*',
-//                                                 headers: :any,
-//                                                 methods: [:get, :post, :put, :patch, :delete, :options, :head]
-//                                         end
-//                                     end
+//                                                           resource '*',
+//                                                              headers: :any,
+//                                                              methods: [:get, :post, :put, :patch, :delete, :options, :head]
+//                                                      end
+//                                                  end
 // 3. double check package.json file for proxy '"proxy": "http://localhost:3000"'
 // 4. bundle install again to install new gem 
 // 5. if not fixed after step four, delete Gemfile.lock, and bundle install again.
